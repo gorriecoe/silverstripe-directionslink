@@ -22,7 +22,7 @@ class DirectionsLink extends DataExtension
      * @var array
      **/
     private static $types = [
-        'Directions' => 'Directions link',
+        'Directions' => 'Directions',
     ];
 
     /**
