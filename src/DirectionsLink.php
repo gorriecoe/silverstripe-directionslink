@@ -70,4 +70,15 @@ class DirectionsLink extends DataExtension
             $linkURL .= $owner->Longitude;
         }
     }
+
+    /**
+     * Event handler called before writing to the database.
+     */
+    public function onBeforeWrite()
+    {
+        $owner = $this->owner;
+        if ($owner->Type == 'Directions') {
+            $owner->setField('OpenInNewWindow', true);
+        }
+    }
 }
