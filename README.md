@@ -27,3 +27,10 @@ For more information check out [BetterBrief\GoogleMapField](https://github.com/B
 ## Maintainers
 
 - [Gorrie Coe](https://github.com/gorriecoe)
+
+## Example
+
+Below are examples of link output:
+
+[Amberly NZ](https://maps.google.com/maps?saddr=Current+Location&amp;daddr=-43.15577642393746/172.72987286045432)
+[Feilding NZ](https://maps.google.com/maps?saddr=Current+Location&daddr=-40.22610854373743/175.568486474398)
