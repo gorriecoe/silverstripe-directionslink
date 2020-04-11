@@ -34,3 +34,23 @@ Below are examples of link output:
 
 - [Amberly NZ](https://maps.google.com/maps?saddr=Current+Location&amp;daddr=-43.15577642393746/172.72987286045432)
 - [Feilding NZ](https://maps.google.com/maps?saddr=Current+Location&daddr=-40.22610854373743/175.568486474398)
+
+## Open in apple maps if iProduct
+
+Below is a basic example that can be added to the frontend of your project to detect apple devices and open the link in apple maps instead.
+
+```js
+var links = .querySelector("a"), i;
+for (i = 0; i < links.length; ++i) {
+    links[i].addEventListener("click", function(event) {
+        event.preventDefault();
+        var link = this.getAttribute("href");
+
+        if ((navigator.platform.indexOf("iPhone") != -1) || (navigator.platform.indexOf("iPod") != -1) || (navigator.platform.indexOf("iPad") != -1)) {
+            link.replace("https://maps.google.com/maps:", "maps://maps.apple.com/");
+        }
+
+        window.open(link);
+    });
+}
+```
