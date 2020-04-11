@@ -3,9 +3,9 @@
 namespace gorriecoe\DirectionsLink;
 
 use BetterBrief\GoogleMapField;
-use SilverStripe\Forms\LiteralField;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\ORM\DataExtension;
+use SilverStripe\View\Requirements;
 use UncleCheese\DisplayLogic\Forms\Wrapper;
 
 /**
@@ -51,21 +51,17 @@ class DirectionsLink extends DataExtension
                 GoogleMapField::create(
                     $owner,
                     _t(__CLASS__ . '.LOCATION', 'Location')
-                ),
-                // Hacky fix to get googlemaps working with DisplayLogic
-                LiteralField::create(
-                    'locationscript',
-                    "<script>jQuery('#Form_ItemEditForm_Type_Directions').change( function() {
-                        if(this.checked) {
-                            jQuery('.googlemapfield').gmapfield();
-                        }
-                    });
-                    jQuery('.googlemapfield').gmapfield();
-                    </script>"
                 )
-
             )
             ->displayIf('Type')->isEqualTo('Directions')->end()
+        );
+        // Hacky fix to get googlemaps working with DisplayLogic
+        Requirements::customScript("jQuery('#Form_ItemEditForm_Type_Directions').change( function() {
+                if(this.checked) {
+                    jQuery('.googlemapfield').gmapfield();
+                }
+            });
+            jQuery('.googlemapfield').gmapfield();"
         );
         return $fields;
     }
