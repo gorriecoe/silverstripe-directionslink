@@ -1,6 +1,6 @@
 {
   "name": "gorriecoe/silverstripe-directionslink",
-  "description": "Adds a logout link type to Link Object.",
+  "description": "Adds a directions link type to Link Object.",
   "type": "silverstripe-vendormodule",
   "license": "BSD-3-Clause",
   "authors": [
