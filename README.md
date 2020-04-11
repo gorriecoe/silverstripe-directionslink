@@ -1,4 +1,4 @@
-# Silverstripe direction link
+# Silverstripe directions link
 
 Adds a direction link type to [gorriecoe/silverstripe-link](https://github.com/gorriecoe/silverstripe-link).  Allowing editor to select a location on google maps, that will then produce a google maps direction link.
 
