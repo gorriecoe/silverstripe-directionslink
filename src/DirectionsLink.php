@@ -73,10 +73,11 @@ class DirectionsLink extends DataExtension
     {
         $owner = $this->owner;
         if ($owner->Type == 'Directions') {
-            $linkURL = 'https://maps.google.com/maps?saddr=Current+Location&daddr=';
-            $linkURL .= $owner->Latitude;
-            $linkURL .= '/';
-            $linkURL .= $owner->Longitude;
+            $linkURL = sprintf(
+                "https://maps.google.com/maps?saddr=Current+Location&daddr=%s/%s",
+                $owner->Latitude,
+                $owner->Longitude
+            );
         }
     }
 
