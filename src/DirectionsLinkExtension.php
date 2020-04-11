@@ -13,7 +13,7 @@ use UncleCheese\DisplayLogic\Forms\Wrapper;
  *
  * @package silverstripe-DirectionsLink
  */
-class DirectionsLink extends DataExtension
+class DirectionsLinkExtension extends DataExtension
 {
     /**
      * A map of object types that can be linked to

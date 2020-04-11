@@ -3,4 +3,4 @@ Name: directionslinkconfig
 ---
 gorriecoe\Link\Models\Link:
   extensions:
-    - gorriecoe\DirectionsLink\DirectionsLink
+    - gorriecoe\DirectionsLink\DirectionsLinkExtension
