@@ -7,7 +7,7 @@ Adds a direction link type to [gorriecoe/silverstripe-link](https://github.com/g
 Composer is the recommended way of installing SilverStripe modules.
 
 ```
-composer require gorriecoe/silverstripe-directionlink
+composer require gorriecoe/silverstripe-directionslink
 ```
 
 Directions link uses [GoogleMapField](https://github.com/BetterBrief/silverstripe-googlemapfield).  So you will need to configure this in your config.yml.
