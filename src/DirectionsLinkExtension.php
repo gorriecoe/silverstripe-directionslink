@@ -11,7 +11,7 @@ use UncleCheese\DisplayLogic\Forms\Wrapper;
 /**
  * Adds a directions link type to Link Object.
  *
- * @package silverstripe-DirectionsLink
+ * @package silverstripe-directionslink
  */
 class DirectionsLinkExtension extends DataExtension
 {
