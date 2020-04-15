@@ -40,14 +40,15 @@ Below are examples of link output:
 Below is a basic example that can be added to the frontend of your project to detect apple devices and open the link in apple maps instead.
 
 ```js
-var links = .querySelector("a"), i;
+var googlemapsurl = "https://maps.google.com/maps:";
+var links = document.querySelectorAll('a[href*="' + googlemapsurl +'"]'), i;
 for (i = 0; i < links.length; ++i) {
     links[i].addEventListener("click", function(event) {
         event.preventDefault();
         var link = this.getAttribute("href");
 
         if ((navigator.platform.indexOf("iPhone") != -1) || (navigator.platform.indexOf("iPod") != -1) || (navigator.platform.indexOf("iPad") != -1)) {
-            link.replace("https://maps.google.com/maps:", "maps://maps.apple.com/");
+            link.replace(googlemapsurl, "maps://maps.apple.com/");
         }
 
         window.open(link);
